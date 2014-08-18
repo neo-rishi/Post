@@ -1,0 +1,58 @@
+<%= form_tag( user_info_posts_path, method: :post) do -%>
+<table>
+	<tr>
+			<td><%=label_tag :Name%></td>
+			<td><%=text_field_tag :name %></td>
+	</tr>
+	<tr>
+			<td><%=label_tag :Last_Name %></td>
+			<td><%=text_field_tag :lname %></td>
+	</tr>
+	<tr>
+			<td><%=label_tag :Gender %></td>
+			<td><%=label_tag :M %>&nbsp;&nbsp;<%=radio_button_tag :gender, 'male' %>&nbsp;&nbsp;<%=label_tag :F%><%=radio_button_tag :gender, 'Fe-male' %> </td>   
+
+	</tr>
+	<tr>
+			<td><%=label_tag :Date %></td>
+			<td><%=date_field_tag :date %></td>
+
+	</tr>
+	<tr>	<td><%=label_tag :Email %></td>
+			<td><%=email_field_tag :email %></td>
+	</tr>
+	<tr>
+			<td><%=label_tag :Password %></td>
+			<td><%=password_field_tag :password %></td>
+	</tr>
+	<tr>
+			<td><%=label_tag :Re_Password %></td>
+			<td><%=password_field_tag :repassword %></td>
+	</tr>
+	<tr>
+			<td><%=label_tag :Age %></td>
+			<td><%=text_field_tag :age %></td>
+	</tr>
+	<tr>
+			<td><%=label_tag :Upload %></td>
+			<td><%=file_field_tag :file %></td>
+	</tr>
+	<tr>
+			<td><%=label_tag :Color %></td>
+			<td><%=color_field_tag :color %></td>
+	</tr>
+	<tr>
+			<td><%=label_tag :Mobile %></td>
+			<td><%=phone_field_tag :mobile %></td>
+	</tr>
+	<tr>
+			<td><%=label_tag :Hobby %></td>
+			<td><%=select_tag :hobby, options_for_select([ 'select hobby',"Sport", "Read", 'Search', 'Travelling', 'Chat' ])%></td>
+
+	</tr>
+	<tr>
+		<td collspan = "2"><%=submit_tag%></td>
+	</tr>		
+</tabel>
+
+<%end%>	
